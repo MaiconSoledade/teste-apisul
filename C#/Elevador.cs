@@ -16,11 +16,11 @@ namespace ProvaAdmissionalCSharpApisul
         public List<int> andarMenosUtilizado()
         {
 
-            // Aqui será Criar lista de andares      
+            // Aqui será criado lista de andares      
             List<int> andares = new List<int>();
             this.elevadores.ForEach(e => andares.Add(e.andar));
 
-            // Ordernar pelo andar - frequente
+            // Vamos deixar ordernado pelo andar - frequente
             var andaresMenosUtilizados = (from a in andares
                                           group a by a into grupo
                                           orderby grupo.Count() ascending
@@ -28,7 +28,7 @@ namespace ProvaAdmissionalCSharpApisul
 
             Console.WriteLine("\nAndares menos utilizados:\n");
 
-            // deverá sair, pois é retorno
+            // aqui tem que sair, pois é retorno
             andaresMenosUtilizados.ForEach(a => Console.WriteLine(a));
 
 
@@ -37,11 +37,11 @@ namespace ProvaAdmissionalCSharpApisul
 
         public List<char> elevadorMaisFrequentado()
         {
-            // Criar lista de elevadores      
+            // Será criado lista de elevadores      
             List<char> elevadores = new List<char>();
             this.elevadores.ForEach(e => elevadores.Add(e.elevador));
 
-            // Ordernar pelo andar - frequente
+            // Deixar ordernado pelo andar - frequente
 
             var elevadoresMaisFrequentados = (from e in elevadores
                                               group e by e into grupo
@@ -50,7 +50,7 @@ namespace ProvaAdmissionalCSharpApisul
 
             Console.WriteLine("\nElevadores mais frequentados:\n");
 
-            // deverá sair, pois é retorno
+            // aqui tem que sair, pois é retorno
             elevadoresMaisFrequentados.ForEach(e => Console.WriteLine(e));
 
             return elevadoresMaisFrequentados;
@@ -89,7 +89,7 @@ namespace ProvaAdmissionalCSharpApisul
 
             Console.WriteLine("\nElevadores menos frequentados:\n");
 
-            // deverá sair, pois é retorno
+            // aqui tem que sair, pois é retorno
             elevadoresMenosFrequentados.ForEach(e => Console.WriteLine(e));
 
 

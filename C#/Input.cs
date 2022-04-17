@@ -24,7 +24,8 @@ namespace ProvaAdmissionalCSharpApisul
             /* using (FileStream fs = File.OpenRead(path))
             {
                 jsonString = await JsonSerializer.DeserializeAsync<Elevador>(fs);
-            } */
+            } 
+            pensei em utilizar mas vi que seria melhor deixar de lado.*/
 
 
             return inputs;
