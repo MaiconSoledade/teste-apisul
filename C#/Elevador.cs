@@ -16,7 +16,7 @@ namespace ProvaAdmissionalCSharpApisul
         public List<int> andarMenosUtilizado()
         {
 
-            // Criar lista de andares      
+            // Aqui será Criar lista de andares      
             List<int> andares = new List<int>();
             this.elevadores.ForEach(e => andares.Add(e.andar));
 
